@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: imerholding
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: imerholding
+  template:
+    metadata:
+      labels:
+        app: imerholding
+    spec:
+      containers:
+      - name: imerholding
+        image: 192.168.1.181:30002/imer/imerholding:latest
+        ports:
+        - containerPort: 80
+

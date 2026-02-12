@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: napolicalcio
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: napolicalcio
+  template:
+    metadata:
+      labels:
+        app: napolicalcio
+    spec:
+      containers:
+      - name: napolicalcio
+        image: 192.168.1.181:30002/imer/napolicalcio:latest
+        ports:
+        - containerPort: 80
+
