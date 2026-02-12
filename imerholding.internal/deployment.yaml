@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: imerholding
-        image: 192.168.1.181:30002/imer/imerholding:latest
+        image: 192.168.1.181:30002/imer/imerholding:v1
         imagePullPolicy: Always
         ports:
         - containerPort: 80
